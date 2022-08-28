@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <h1>It's time for a Dojo Survey :)</h1>
+    <form action="/user_info" method="POST">
+        <!-- Input for User Name -->
+        <label for="user_name">Your Name:</label>
+        <input type="text" id="user_name" name="user_name">
+        <label for="dojo_loc">Dojo Location:</label>
+
+        <!-- input for user location -->
+        <select name="dojo_loc" id="dojo_loc">
+            <option value="pst">Pacific</option>
+            <option value="mst">Mountain</option>
+            <option value="cst">Central</option>  
+            <option value="est">Eastern</option>
+        </select> 
+
+        <!-- input for user favorite language -->
+        <label for="fav_lang">Favorite Language:</label>
+        <select name="fav_lang" id="fav_lang">
+            <option value="py">Python</option>
+            <option value="jv">Java</option>
+            <option value="js">JavaScript</option>  
+            <option value="cs">C#</option>
+        </select> 
+    </form>
+</body>
+</html>
