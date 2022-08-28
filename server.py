@@ -11,7 +11,7 @@ def index():
 @app.route('/result')
 def result():
     print('result.html is being rendered')
-    return render_template('result.html')   
+    return render_template('result.html', name_on_template=session['user_name'], dojo_on_template=session['dojo_loc'], fav_lang_on_template=session['fav_lang'])   
 
 @app.route('/user_info', methods=['POST'])
 def user_info():
@@ -20,7 +20,7 @@ def user_info():
     session['dojo_loc'] = request.form['dojo_loc']
     session['fav_lang'] = request.form['fav_lang']
 
-    return redirect('/result', name_on_template=session['user_name'], dojo_on_template=session['dojo_loc'], fav_lang_on_template=session['fav_lang'])
+    return redirect('/result')
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -7,6 +7,20 @@
     <title>Form Results</title>
 </head>
 <body>
-    
+    <h1>Fancy-pants User Data</h1>
+    <div class="container">
+        <table>
+            <tr>
+                <th>User Name</th>
+                <th>Location</th>
+                <th>Favorite Language</th>
+            </tr>
+            <tr>
+                <td>{{ session['user_name'] }}</td>
+                <td>{{ session['dojo_loc'] }}</td>
+                <td>{{ session['fav_lang'] }}</td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
